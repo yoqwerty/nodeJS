@@ -7,12 +7,8 @@
 // to install any module globally : add -g (i.e npm install nodemon -g)
 // node inspect app.js - will attach a debugger and then go to chrome://inspect which will take u to developer tools 
 
-
-
-const chalk = require('chalk');
 const yargs = require('yargs');
 const notes = require('./notes');
-const { readNote } = require('./notes');
 
 //CREATES A NEW COMMAND
 yargs.command({
