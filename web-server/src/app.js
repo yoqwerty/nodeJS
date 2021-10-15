@@ -47,12 +47,30 @@ app.get('/help', (req, res) => {
     });
 });
 
+app.get('/help/*', (req, res) => {
+    res.render('404', {
+        title: '404',
+        name: 'Supreet',
+        errorMessage: 'Help article not found'
+    })
+});
+
 app.get('/weather', (req, res) => {
     res.send({
         forecast: 'It is raining'
     });
 })
 
+// * -> wildcard (i.e. everything is a match)
+//if none of the above routes match, it will land up here
+app.get('*', (req, res) => {
+    res.render('404', {
+        title: '404',
+        name: 'Supreet',
+        errorMessage: 'Page not found'
+    })
+
+})
 app.listen(3000, () => {
     console.log('Server is up on port 3000');
 })
