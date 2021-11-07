@@ -1,0 +1,4 @@
+//change email only in one repo
+git config user.email "ssupreetkaur420@gmail.com"
+
+//
